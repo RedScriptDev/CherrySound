@@ -1,0 +1,61 @@
+@import 'bootstrap/assets/stylesheets/bootstrap';
+a {
+    transition: all 200ms linear;
+}
+
+img {
+    max-width: 100%;
+}
+
+.app {
+    &__header {
+        padding: 10px;
+        background:$gray-lighter;
+    }
+}
+
+.logo {
+    color: $brand-primary;
+    font-family: 'Grand Hotel', sans-serif;
+    font-size: $font-size-h1;
+    text-align: center;
+}
+
+.nav {
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 5px;
+    a:hover {
+        color: #fff;
+    }
+}
+
+.jumbotron {
+    background: url('../imgs/main-photo.jpg') no-repeat center;
+    background-size: cover;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    min-height: 300px;
+    padding-top: 100px;
+    h2 {
+        text-shadow: 0px 0px 10px #000;
+    }
+}
+
+.service-btns {
+    text-align: center;
+    h4 {
+        text-transform: uppercase;
+    }
+}
+
+.page-heading{
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.kj {
+  text-align:center;
+  font-weight: 300;
+}
