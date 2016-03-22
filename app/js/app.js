@@ -2,17 +2,19 @@ const $ = require('jquery');
 const _ = require('underscore');
 const Backbone = require('backbone');
 const Mn = require('backbone.marionette');
-const App = new Mn.Application();
 
+const Router = require('./router');
 Backbone.$ = $;
 window.App = App;
 
-
-App.on('start', function() {
-    Backbone.history.start();
+const App = new Mn.Application({
+    onStart: function(options) {
+    	var router = new Router();
+        Backbone.history.start();
+    }
 });
 
 $(document).ready(function() {
     App.start();
-    console.log("Starting...");
+    console.log("Starting App...");
 });

@@ -1,4 +1,4 @@
-const $ = require('jquery');
+onst $ = require('jquery');
 const _ = require('underscore');
 const Backbone = require('backbone');
 

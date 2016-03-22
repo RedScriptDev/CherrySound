@@ -1,6 +1,10 @@
 @import 'bootstrap/assets/stylesheets/bootstrap';
 a {
     transition: all 200ms linear;
+    &:active,
+    &:focus {
+        color: #fff;
+    }
 }
 
 img {
@@ -10,7 +14,20 @@ img {
 .app {
     &__header {
         padding: 10px;
-        background:$gray-lighter;
+        background: $gray-lighter;
+    }
+    &__footer {
+        background: $gray-lighter;
+        line-height: 80px;
+        text-align: center;
+        margin-top: 20px;
+        a {
+            &:active,
+            &:visited,
+            &:focus {
+                color: $brand-primary;
+            }
+        }
     }
 }
 
@@ -31,31 +48,32 @@ img {
 }
 
 .jumbotron {
-    background: url('../imgs/main-photo.jpg') no-repeat center;
+    background: url('../imgs/main-photo.jpg') no-repeat top;
     background-size: cover;
     color: #fff;
     text-transform: uppercase;
     text-align: center;
-    min-height: 300px;
-    padding-top: 100px;
+    min-height: 400px;
+    padding-top: 150px;
     h2 {
         text-shadow: 0px 0px 10px #000;
     }
 }
 
 .service-btns {
+    margin-top: 10px;
     text-align: center;
     h4 {
         text-transform: uppercase;
     }
 }
 
-.page-heading{
-  text-transform: uppercase;
-  font-weight: 300;
+.page-heading {
+    text-transform: uppercase;
+    font-weight: 300;
 }
 
 .kj {
-  text-align:center;
-  font-weight: 300;
+    text-align: center;
+    font-weight: 300;
 }
