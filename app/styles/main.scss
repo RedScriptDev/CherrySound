@@ -1,20 +1,37 @@
 @import 'bootstrap/assets/stylesheets/bootstrap';
 a {
     transition: all 200ms linear;
-    &:active,
-    &:focus {
-        color: #fff;
-    }
 }
 
 img {
     max-width: 100%;
 }
 
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
 .app {
     &__header {
         padding: 10px;
         background: $gray-lighter;
+        a {
+            &:active,
+            &:focus {
+                color: #fff;
+            }
+        }
+    }
+    &__container {
+        min-height: 70vh;
     }
     &__footer {
         background: $gray-lighter;
@@ -36,6 +53,13 @@ img {
     font-family: 'Grand Hotel', sans-serif;
     font-size: $font-size-h1;
     text-align: center;
+    a {
+        &:active,
+        &:visited,
+        &:focus {
+            color: $brand-primary;
+        }
+    }
 }
 
 .nav {
@@ -62,6 +86,7 @@ img {
 
 .service-btns {
     margin-top: 10px;
+    margin-bottom: 20px;
     text-align: center;
     h4 {
         text-transform: uppercase;
@@ -76,4 +101,53 @@ img {
 .kj {
     text-align: center;
     font-weight: 300;
+}
+
+.instaimage {
+    margin-bottom: 10px;
+}
+
+.schedule-table {
+    th,
+    td {
+        text-align: center;
+    }
+}
+
+.search {
+    background: $brand-primary;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+
+    label {
+      color: #fff;
+      display: block;
+    }
+
+    input[type="text"]{
+      color: $brand-primary;
+    }
+
+    .submit-button{
+      color:#fff;
+      background: lighten(#000, 5%);
+      padding:10px;
+      margin:10px;
+      border-radius:10px;
+      transition: background 200ms linear;
+      text-transform: uppercase;
+      font-weight: 400;
+
+      &:hover{
+        background:#000;
+        cursor: pointer;
+      }
+    }
+}
+
+.search-result {
+    border-bottom: solid 1px $brand-primary;
+    padding: 10px 0;
 }

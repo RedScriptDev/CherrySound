@@ -2,7 +2,6 @@ const $ = require('jquery');
 const _ = require('underscore');
 const Backbone = require('backbone');
 const Mn = require('backbone.marionette');
-const App = new Mn.Application();
 
 const template = require('../templates/AppLayout.hbs');
 
@@ -12,6 +11,7 @@ const ServicesView = require('./ServicesView');
 const MediaView = require('./MediaView');
 const NewsView = require('./NewsView');
 const ContactView = require('./ContactView');
+const SearchView = require('./SearchView');
 
 
 const AppLayout = Mn.LayoutView.extend({
@@ -43,7 +43,11 @@ const AppLayout = Mn.LayoutView.extend({
     onShowContact: function() {
         var contactView = new ContactView();
         this.showChildView('main', contactView);
-    }
+    },
+    onShowSearch: function() {
+        var searchView = new SearchView();
+        this.showChildView('main', searchView);
+    },
 });
 
 module.exports = AppLayout;

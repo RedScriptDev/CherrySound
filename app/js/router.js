@@ -14,7 +14,8 @@ var Router = Mn.AppRouter.extend({
         'services':'services',
         'media':'media',
         'news':'news',
-        'contact':'contact'
+        'contact':'contact',
+        'search':'search'
     }
 });
 

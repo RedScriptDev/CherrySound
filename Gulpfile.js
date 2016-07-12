@@ -64,7 +64,7 @@ gulp.task('imgmin', function() {
 });
 
 gulp.task('copyfonts', function() {
-    return gulp.src('./app/styles/fonts/*')
+    return gulp.src('./app/styles/bootstrap/assets/fonts/**/*')
         .pipe(gulp.dest('./dist/styles/fonts/'));
 });
 
@@ -77,8 +77,7 @@ gulp.task('browser-sync', function() {
         injectChanges: true,
         server: {
             baseDir: './dist'
-        },
-        open: false
+        }
     });
 });
 
@@ -98,4 +97,4 @@ gulp.task('watch', function() {
 
 gulp.task('default', ['browser-sync', 'htmlmin', 'browserify', 'sass', 'imgmin', 'copyfonts', 'watch']);
 
-gulp.task('build', ['html', 'browserify', 'build:sass', 'imgmin', 'copyfonts']);
+gulp.task('build', ['htmlmin', 'browserify', 'build:sass', 'imgmin', 'copyfonts']);

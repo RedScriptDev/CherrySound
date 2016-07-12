@@ -34,6 +34,10 @@ var Controller = Mn.Object.extend({
     contact: function() {
         var layout = this.getOption('layout');
         layout.triggerMethod('show:contact');
+    },
+    search: function() {
+        var layout = this.getOption('layout');
+        layout.triggerMethod('show:search');
     }
 });
 

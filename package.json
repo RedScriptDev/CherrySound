@@ -1,5 +1,5 @@
 {
-  "name": "Cherry Sound Entertainment",
+  "name": "Cherry-Sound-Entertainment",
   "version": "0.0.1",
   "description": "",
   "repository": {
@@ -16,6 +16,7 @@
     "backbone": "~1.2.3",
     "backbone.marionette": "~2.4.4",
     "express": "~4.13.3",
+    "instafeed.js": "^1.4.1",
     "jquery": "~2.1.4",
     "underscore": "~1.8.3"
   },

@@ -9,8 +9,11 @@ window.App = App;
 
 const App = new Mn.Application({
     onStart: function(options) {
-    	var router = new Router();
+        var router = new Router();
         Backbone.history.start();
+        if (window.__agent) {
+            window.__agent.start(Backbone, Mn);
+        }
     }
 });
 
