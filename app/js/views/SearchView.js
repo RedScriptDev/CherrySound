@@ -15,12 +15,16 @@ const SearchView = Mn.CompositeView.extend({
     ui: {
         artistInput: '#artist-input',
         songInput: '#song-input',
-        searchSubmit: '.submit-button'
+        searchSubmit: '.submit-button',
+        noResults: '.no-results'
     },
     events: {
         "click @ui.searchSubmit": "submitSearch",
         "keyup @ui.artistInput": "keyPressHandler",
         "keyup @ui.songInput": "keyPressHandler"
+    },
+    collectionEvents:{
+        "reset":"checkResults"
     },
     keyPressHandler: function(e) {
         if (event.keyCode == 13) {
@@ -38,6 +42,13 @@ const SearchView = Mn.CompositeView.extend({
             },
             reset: true
         })
+    },
+    checkResults:function(){
+        if(this.collection.length === 0){
+            this.ui.noResults.show()
+        } else {
+            this.ui.noResults.hide()
+        }
     }
 });
 
