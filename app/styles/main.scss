@@ -8,15 +8,15 @@ img {
 }
 
 .row-centered {
-    text-align:center;
+    text-align: center;
 }
 .col-centered {
-    display:inline-block;
-    float:none;
+    display: inline-block;
+    float: none;
     /* reset the text-align */
-    text-align:left;
+    text-align: left;
     /* inline-block space fix */
-    margin-right:-4px;
+    margin-right: -4px;
 }
 
 .app {
@@ -122,28 +122,28 @@ img {
     margin-top: 20px;
 
     label {
-      color: #fff;
-      display: block;
+        color: #fff;
+        display: block;
     }
 
-    input[type="text"]{
-      color: $brand-primary;
+    input[type='text'] {
+        color: $brand-primary;
     }
 
-    .submit-button{
-      color:#fff;
-      background: lighten(#000, 5%);
-      padding:10px;
-      margin:10px;
-      border-radius:10px;
-      transition: background 200ms linear;
-      text-transform: uppercase;
-      font-weight: 400;
+    .submit-button {
+        color: #fff;
+        background: lighten(#000, 5%);
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px;
+        transition: background 200ms linear;
+        text-transform: uppercase;
+        font-weight: 400;
 
-      &:hover{
-        background:#000;
-        cursor: pointer;
-      }
+        &:hover {
+            background: #000;
+            cursor: pointer;
+        }
     }
 }
 
@@ -152,5 +152,11 @@ img {
     padding: 10px 0;
 }
 
-#success_message, .no-results{ display: none;}
+#success_message,
+.no-results {
+    display: none;
+}
 
+.margin-20 {
+    margin-bottom: 20px;
+}
