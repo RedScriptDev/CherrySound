@@ -51,7 +51,7 @@ explode('@', $email);
 
 // --Sort mail with regular expressions
 
-$toaddress = "Razor@CherrySound.com"; //Default
+$toaddress = "djrazor1@msn.com"; //Default
 // if(eregi('shop|customer service|retail', $feedback)){
 // 	$toaddress = 'retail@example.com';
 // } else if (eregi('deliver|fullfill', $feedback)){
